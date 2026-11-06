@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+        .linia { height: 5px; background: #080808; border: 0; width: 100%; margin-left: 0; }
+
+        .navigator { text-align: center; color:#080808; font-weight: bold; background-color: #444342; }
+
+        body {
+            background-color: #ddd;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 30px;
+        }
+
+        .formularz {
+            background-color: white;
+            width: 700px;
+            max-width: 90%;
+            margin: auto;
+            padding: 25px;
+            border: 1px solid #aaa;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 28px;
+            font-weight: normal;
+            border-bottom: 2px solid #999;
+            padding-bottom: 15px;
+        }
+
+        .gora {
+            display: flex;
+            gap: 30px;
+        }
+
+        .lewa {
+            width: 60%;
+        }
+
+        .prawa {
+            width: 40%;
+        }
+
+        label {
+            display: block;
+            margin-top: 12px;
+        }
+
+        input[type="text"],
+        input[type="number"],
+        select {
+            width: 90%;
+            padding: 8px;
+            margin-top: 5px;
+            border: 1px solid #888;
+        }
+
+        .poziom {
+            border: 1px solid #888;
+            height: 260px;
+            padding: 10px;
+        }
+
+        .poziom input {
+            width: 90%;
+            padding: 8px;
+        }
+
+        .pytania {
+            border-top: 1px solid #999;
+            margin-top: 25px;
+            padding-top: 15px;
+        }
+
+        .pytania p {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+
+        .opcje label {
+            display: inline-block;
+            margin-right: 15px;
+        }
+
+        .przyciski {
+            margin-top: 30px;
+            border-top: 1px solid #999;
+            padding-top: 20px;
+            text-align: center;
+        }
+
+        button {
+            padding: 10px 20px;
+            margin: 5px;
+            border: 1px solid #777;
+            background-color: #eee;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #ccc;
+        }
+
+        a {
+            color: black;
+            text-decoration: none;
+        }
+
+        @media (max-width: 600px) {
+            .gora {
+                display: block;
+            }
+
+            .lewa, .prawa {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="formularz">
+
+        <h1>ZAPIS DO SZKOLNEGO KLANU SC</h1>
+
+        <form>
+
+            <div class="gora">
+
+                <div class="lewa">
+
+                    <label>Imię:
+                        <input type="text" name="imie">
+                    </label>
+
+                    <label>Miasto:
+                        <input type="text" name="miasto">
+                    </label>
+
+                    <label>Nick w grze:
+                        <input type="text" name="nick">
+                    </label>
+
+                    <label>Nr w dzienniku:
+                        <input type="number" name="numer">
+                    </label>
+
+                </div>
+
+                <div class="prawa">
+
+                    <label>Jaki masz poziom?</label>
+
+                    <div class="poziom">
+                        <input type="text" name="poziom"
+                        placeholder="Mam level...">
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="pytania">
+
+                <p>Czy grałeś już kiedyś w Clan War'y?</p>
+
+                <div class="opcje">
+                    <label>
+                        <input type="radio" name="clanwar" value="tak">
+                        tak
+                    </label>
+
+                    <label>
+                        <input type="radio" name="clanwar" value="nie">
+                        Nie
+                    </label>
+                </div>
+
+                <p>Czy masz dobre wyposażenie?</p>
+
+                <div class="opcje">
+                    <label>
+                        <input type="radio" name="wyposazenie" value="tak">
+                        tak
+                    </label>
+
+                    <label>
+                        <input type="radio" name="wyposazenie" value="nie">
+                        nie
+                    </label>
+                </div>
+
+                <p>Czy umiesz grać drużynowo?</p>
+
+                <div class="opcje">
+                    <label>
+                        <input type="radio" name="druzyna" value="tak">
+                        tak
+                    </label>
+
+                    <label>
+                        <input type="radio" name="druzyna" value="nie">
+                        nie
+                    </label>
+                </div>
+
+                <p>Jakie army posiadasz, które są MASTER?</p>
+
+                <div class="opcje">
+                    <label>
+                        <input type="checkbox" name="army" value="super-heavy">
+                        Super-HEAVY
+                    </label>
+
+                    <label>
+                        <input type="checkbox" name="army" value="combat">
+                        Combat
+                    </label>
+
+                    <label>
+                        <input type="checkbox" name="army" value="combo">
+                        Combo
+                    </label>
+
+                    <label>
+                        <input type="checkbox" name="army" value="scientist">
+                        Scientist
+                    </label>
+                </div>
+
+                <p>Główny język mowy:</p>
+
+                <select name="jezyk">
+                    <option value="polski">Polski</option>
+                    <option value="angielski">Angielski</option>
+                    <option value="niemiecki">Niemiecki</option>
+                    <option value="inny">Inny</option>
+                </select>
+
+            </div>
+
+            <div class="przyciski">
+
+                <button type="submit">Prześlij</button>
+
+                <button type="reset">Wyczyść</button>
+
+                <button type="button">
+                    <a href="#info">Info</a>
+                </button>
+
+                <button type="button">
+                    <a href="https://discord.com/" target="_blank">
+                        Grupa DC
+                    </a>
+                </button>
+
+            </div>
+
+        </form>
+
+        <p id="info">Formularz zapisowy do szkolnego klanu SC.</p>
+
+    </div>
+
+    <hr class="linia">
+    <h1>Formularz</h1>
+    <hr class="linia">
+</body>
+</html>
